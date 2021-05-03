@@ -1,9 +1,7 @@
 package com.irfan.tourismapp.ui.detail
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,10 +32,6 @@ class DetailTourismFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentDetailTourismBinding.inflate(inflater, container, false)
-//        val contextThemeWrapper=
-//            ContextThemeWrapper(activity, R.style.Theme_TourismApp_NoActionBar)
-//        val localinflater = inflater.cloneInContext(contextThemeWrapper)
-
         return binding.root
     }
 

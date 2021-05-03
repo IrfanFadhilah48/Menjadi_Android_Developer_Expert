@@ -1,8 +1,8 @@
 package com.irfan.tourismapp.entity.data.source.local
 
-import androidx.lifecycle.LiveData
 import com.irfan.tourismapp.entity.data.source.local.db.TourismDao
 import com.irfan.tourismapp.entity.data.source.local.entity.TourismEntity
+import io.reactivex.Flowable
 
 class LocalDataSource constructor(private val tourismDao: TourismDao) {
     companion object{
@@ -14,8 +14,8 @@ class LocalDataSource constructor(private val tourismDao: TourismDao) {
             }
     }
 
-    fun getAllTourism(): LiveData<List<TourismEntity>> = tourismDao.getAllTourism()
-    fun getFavoriteTourism(): LiveData<List<TourismEntity>> = tourismDao.getFavoriteTourism()
+    fun getAllTourism(): Flowable<List<TourismEntity>> = tourismDao.getAllTourism()
+    fun getFavoriteTourism(): Flowable<List<TourismEntity>> = tourismDao.getFavoriteTourism()
     fun insertTourism(tourismList: List<TourismEntity>) = tourismDao.insertTourism(tourismList)
     fun setFavoriteTourism(tourism: TourismEntity, newState: Boolean){
         tourism.isFavorite = newState

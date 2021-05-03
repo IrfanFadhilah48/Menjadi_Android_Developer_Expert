@@ -9,7 +9,7 @@ data class TourismResponse(
     @SerializedName("message")
     val message: String?,
     @SerializedName("places")
-    val places: List<Place>?
+    val places: List<Place>
 )
 
 data class Place(
