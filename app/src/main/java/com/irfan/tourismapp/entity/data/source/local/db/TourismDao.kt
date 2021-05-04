@@ -1,6 +1,5 @@
 package com.irfan.tourismapp.entity.data.source.local.db
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.irfan.tourismapp.entity.data.source.local.entity.TourismEntity
 import io.reactivex.Completable
